@@ -8,7 +8,9 @@ public abstract class Conductor:Usuario{
     public abstract int GetMaxCapacity();
 }
 
+
 public class ConductorPool:Conductor{
+
     public int MaxCapacity;
     public override int GetMaxCapacity(){
         if (!(vehiculo is null)){
@@ -27,6 +29,7 @@ public class ConductorPool:Conductor{
         Calificacion = qualification;
     }
 }
+
 public class ConductorComun:Conductor{
     public override int GetMaxCapacity()
     {
@@ -42,3 +45,4 @@ public class ConductorComun:Conductor{
         Calificacion = qualification;
     }
 }
+

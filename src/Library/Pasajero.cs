@@ -1,4 +1,6 @@
-public class Pasajero : Usuario{
+using Library;
+
+public abstract class Pasajero:Usuario{
     public string Saludar(){
         return "Hello";
     }
