@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace PII_Herencia
 {
@@ -7,6 +7,8 @@ namespace PII_Herencia
     {
         static void Main(string[] args)
         {
+            List<Conductor> Conductores = new List<Conductor>();
+            List<Pasajero> Pasajeros = new List<Pasajero>();
             /*
             En éste método deberas mostrar un ejemplo de funcionamiento de tu programa an pseudocódigo. A continuación te 
             planteamos un ejemplo de como hacerlo. Esto no significa que te limites a hacer solamente esto, debes pensar 
