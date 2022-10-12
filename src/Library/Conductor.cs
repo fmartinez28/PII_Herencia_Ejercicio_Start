@@ -7,7 +7,7 @@ public abstract class Conductor:Usuario{
     public abstract int GetMaxCapacity();
 }
 
-public class ConductorPool:Conductor{
+public abstract class ConductorPool:Conductor{
     public string ModeloVehiculo;
     public int MaxCapacity;
     public int GetMaxCapacity(){
@@ -17,6 +17,6 @@ public class ConductorPool:Conductor{
         throw new Exception("El vehículo no está asignado.");
     }
 }
-public class ConductorComun:Conductor{
+public abstract class ConductorComun:Conductor{
     public string ModeloVehiculo;
 }
