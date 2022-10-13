@@ -12,6 +12,12 @@ public abstract class Conductor:Usuario{
 public class ConductorPool:Conductor{
 
     public int MaxCapacity;
+    public ConductorPool(string Nombre, string Apellido, string Cedula)
+    {
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Cedula = Cedula;
+    }
     public override int GetMaxCapacity(){
         if (!(vehiculo is null)){
             return vehiculo.CapacidadMaxima;
@@ -19,9 +25,9 @@ public class ConductorPool:Conductor{
         throw new Exception("El vehículo no está asignado.");
     }
 
-    public override string GetCalificacion()
+    public override Rating GetCalificacion()
     {
-        return $"{Calificacion}";
+        return Calificacion;
     }
 
     public override void Calificar(Rating qualification)
@@ -31,13 +37,19 @@ public class ConductorPool:Conductor{
 }
 
 public class ConductorComun:Conductor{
+    public ConductorComun(string Nombre, string Apellido, string Cedula)
+    {
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Cedula = Cedula;
+    }
     public override int GetMaxCapacity()
     {
         return 1;
     }
-    public override string GetCalificacion()
+    public override Rating GetCalificacion()
     {
-        return $"{Calificacion}";
+        return Calificacion;
     }
 
     public override void Calificar(Rating qualification)

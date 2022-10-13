@@ -16,6 +16,6 @@ public abstract class Usuario
     };
 
     protected Rating Calificacion { get; set; }
-    public abstract string GetCalificacion();
+    public abstract Rating GetCalificacion();
     public abstract void Calificar(Rating qualif);
 }
