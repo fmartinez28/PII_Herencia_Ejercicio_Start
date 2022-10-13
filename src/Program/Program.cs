@@ -14,18 +14,32 @@ namespace PII_Herencia
             // planteamos un ejemplo de como hacerlo. Esto no significa que te limites a hacer solamente esto, debes pensar 
             // en grande!
 
-            Usuario User1 = new Pasajero();
-            User1.Nombre="Ruperto";
-            User1.Apellido="Ramirez";
-            User1.Cedula="54678919";
 
-            Usuario User2 = new Pasajero();
-            User2.Nombre="Lorelei";
-            User2.Apellido="Liju";
-            User2.Cedula="57538919";
+            Vehiculo V1 = new Vehiculo("Renault", "Deportivo", 2015, "Negro", "7475", 7);
+            Vehiculo V2 = new Vehiculo("Toyota", "Sub", 2001, "Blanco", "3333", 5);
+            Vehiculo V3 = new Vehiculo("Geely", "Pickup", 2022, "Gris", "1618", 2);
+            Vehiculo V4 = new Vehiculo("Ferrari", "Descapotable", 2021, "Rojo", "1111", 2);
 
-            TwitterPrinter.PrintRegistro(User1, imagen);
-            TwitterPrinter.PrintRegistro(User2, imagen);
+
+
+            Usuario User1 = new Pasajero("Ruperto", "Ramirez","54678919");
+            
+            Usuario User2 = new Pasajero("Lorelei","Liju","57538919");
+
+            Usuario User3 = new ConductorPool("Gaston","Perez","35242864",V1);
+
+            Usuario User4 = new ConductorPool("Felipe","Marquez","35215642",V2);
+
+            Usuario User5 = new ConductorComun("Luis","Suarez","36871231",V4);
+
+            Usuario User6 = new ConductorPool("Santiago","Santi","33241563",V3);
+           
+            TwitterPrinter.PrintRegistro(User1, "src\\Imagenes\\3.png");
+            TwitterPrinter.PrintRegistro(User2, "src\\Imagenes\\1.jpeg");
+            TwitterPrinter.PrintRegistro(User3, "src\\Imagenes\\4.jpeg");
+            TwitterPrinter.PrintRegistro(User4, "src\\Imagenes\\5.jpeg");
+            TwitterPrinter.PrintRegistro(User5, "src\\Imagenes\\2.webp");
+            TwitterPrinter.PrintRegistro(User6, "src\\Imagenes\\6.webp");
 
 
 
