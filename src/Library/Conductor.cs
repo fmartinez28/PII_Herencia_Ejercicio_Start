@@ -12,11 +12,12 @@ public abstract class Conductor:Usuario{
 public class ConductorPool:Conductor{
 
     public int MaxCapacity;
-    public ConductorPool(string Nombre, string Apellido, string Cedula)
+    public ConductorPool(string Nombre, string Apellido, string Cedula, Vehiculo Micro)
     {
         this.Nombre = Nombre;
         this.Apellido = Apellido;
         this.Cedula = Cedula;
+        this.vehiculo = Micro;
     }
     public override int GetMaxCapacity(){
         if (!(vehiculo is null)){
@@ -37,11 +38,12 @@ public class ConductorPool:Conductor{
 }
 
 public class ConductorComun:Conductor{
-    public ConductorComun(string Nombre, string Apellido, string Cedula)
+    public ConductorComun(string Nombre, string Apellido, string Cedula, Vehiculo Auto)
     {
         this.Nombre = Nombre;
         this.Apellido = Apellido;
         this.Cedula = Cedula;
+        this.vehiculo = Auto;
     }
     public override int GetMaxCapacity()
     {
