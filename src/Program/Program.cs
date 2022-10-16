@@ -33,13 +33,16 @@ namespace PII_Herencia
             Usuario User5 = new ConductorComun("Luis","Suarez","36871231",V4);
 
             Usuario User6 = new ConductorPool("Santiago","Santi","33241563",V3);
+
+            Usuario ElMejorConductor = new ConductorPool("Mike","Hawk","3877876",V2);
            
-            TwitterPrinter.PrintRegistro(User1, "src\\Imagenes\\3.png");
-            TwitterPrinter.PrintRegistro(User2, "src\\Imagenes\\1.jpeg");
-            TwitterPrinter.PrintRegistro(User3, "src\\Imagenes\\4.jpeg");
-            TwitterPrinter.PrintRegistro(User4, "src\\Imagenes\\5.jpeg");
-            TwitterPrinter.PrintRegistro(User5, "src\\Imagenes\\2.webp");
-            TwitterPrinter.PrintRegistro(User6, "src\\Imagenes\\6.webp");
+            TwitterPrinter.PrintRegistro(User1, "..\\Imagenes\\3.png");
+            TwitterPrinter.PrintRegistro(User2, "..\\Imagenes\\1.jpeg");
+            TwitterPrinter.PrintRegistro(User3, "..\\Imagenes\\4.jpg");
+            TwitterPrinter.PrintRegistro(User4, "..\\Imagenes\\5.jpg");
+            TwitterPrinter.PrintRegistro(User5, "..\\Imagenes\\2.webp");
+            TwitterPrinter.PrintRegistro(User6, "..\\Imagenes\\6.webp");
+            TwitterPrinter.PrintRegistro(ElMejorConductor, "..\\Imagenes\\ElMejorConductor.webp");
 
 
 
